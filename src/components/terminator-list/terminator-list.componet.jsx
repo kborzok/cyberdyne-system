@@ -3,18 +3,19 @@ import Terminator from '../terminator/terminator.component';
 
 
 const TerminatorList = ({models}) => {
-    const terminatorComponets = models.map((model) => {
+    
+    return(
+        <div>
+            {models.map((model) => {
         return(
             <Terminator
+            key = {model.id}
             id = {model.id}
             name = {model.name}
             serialNumber ={model.serialNumber}
             />
         )
-    });
-    return(
-        <div>
-            {terminatorComponets}
+    })}
         </div>
     )
 }
