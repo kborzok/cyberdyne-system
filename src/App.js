@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TerminatorList from "./components/terminator-list/terminator-list.componet";
 import { models } from "./models";
 import SearchBox from "./components/searchbox/searchbox.component";
+import './App.css';
 
 class App extends Component {
     constructor(){
