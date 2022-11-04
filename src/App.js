@@ -20,12 +20,8 @@ class App extends Component {
     }
     componentDidMount(){
         fetch("https://jsonplaceholder.typicode.com/users")
-        .then((response) => console.log(response.json()))
-        .catch((error) => console.log(error))
-        //.then((response) => response.json())
-        //.then((users) =>this.setState({models: users}) )
-        //this.setState({models: users})
-        //console.log(users)
+        .then((response) => response.json())
+        .then((users) => this.setState({ models:users }))
     }
     render(){
         //console.log('render')
