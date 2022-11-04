@@ -12,7 +12,7 @@ const TerminatorList = ({models}) => {
             key = {model.id}
             id = {model.id}
             name = {model.name}
-            serialNumber ={model.serialNumber}
+            serialNumber ={model.phone}
             />
         )
     })}

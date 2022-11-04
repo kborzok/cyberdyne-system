@@ -59,4 +59,9 @@ export const models = [
       name: "T-8000",
       serialNumber: 8934765437,
     },
+    {
+      id: 13,
+      name: "Schwarzi T-10",
+      serialNumber: 8934765437,
+    },
   ];

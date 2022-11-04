@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import TerminatorList from "./components/terminator-list/terminator-list.componet";
-import { models } from "./models";
+//import { models } from "./models";
 import SearchBox from "./components/searchbox/searchbox.component";
 import './App.css';
 
 class App extends Component {
     constructor(){
+        //console.log('constructor')
         super();
         this.state = {
-            models: models,
+//            models: models,
+              models: [],
             searchfield: ''
         }
     }
@@ -16,7 +18,17 @@ class App extends Component {
         this.setState({searchfield: event.target.value})
         //console.log(filteredModels);
     }
+    componentDidMount(){
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => console.log(response.json()))
+        .catch((error) => console.log(error))
+        //.then((response) => response.json())
+        //.then((users) =>this.setState({models: users}) )
+        //this.setState({models: users})
+        //console.log(users)
+    }
     render(){
+        //console.log('render')
         const filteredModels = this.state.models.filter((model) => {
             return(model.name
             .toLowerCase()
